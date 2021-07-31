@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ItemText from './components/item-text';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ItemText />
   </React.StrictMode>,
   document.getElementById('root')
 );
