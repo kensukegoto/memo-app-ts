@@ -1,4 +1,4 @@
-import { Dispatch } from "react";
+// import { Dispatch } from "react";
 import { ActionType } from "../action-types";
 import {
   Action,
@@ -29,7 +29,7 @@ export const deleteItem = (id: string): DeleteItemAction => {
   }
 };
 
-export const moveItem = (id:string, direction: Direction) => {
+export const moveItem = (id:string, direction: Direction): MoveItemAction => {
   return {
     type: ActionType.MOVE_ITEM,
     payload: {
