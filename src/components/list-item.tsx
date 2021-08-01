@@ -11,8 +11,6 @@ const ListItem: React.FC = () => {
     return order.map(id => data[id]);
   });
 
-  console.log(items);
-
   const renderedItems = items.map(item => {
     return (
       <Fragment key={item.id}>
