@@ -10,7 +10,7 @@ import ListItem from './components/list-item';
 const App = () => {
   return (
     <Provider store={store}>
-      <div>
+      <div className="section">
         <ListItem />
       </div>
     </Provider>

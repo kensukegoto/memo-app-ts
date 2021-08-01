@@ -1,3 +1,4 @@
+import './list-item.scss';
 import { Fragment } from 'react';
 import { useTypedSelector } from '../hooks/use-typed-selector';
 import ItemText from './item-text';
