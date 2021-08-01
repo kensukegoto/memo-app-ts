@@ -1,22 +1,29 @@
+import { Fragment } from 'react';
 import { useTypedSelector } from '../hooks/use-typed-selector';
-import { useActions } from '../hooks/use-actions';
+import ItemText from './item-text';
+import AddItem from './add-item';
 
 const ListItem: React.FC = () => {
-  const { insertItemAfter } = useActions();
   const items = useTypedSelector(({
     items: {order,data}
   }) => {
     return order.map(id => data[id]);
   });
 
-  const onClick = () => {
-    insertItemAfter(null,'text');
-  }
+  console.log(items);
+
+  const renderedItems = items.map(item => {
+    return (
+      <Fragment key={item.id}>
+        <ItemText item={item} />
+      </Fragment>
+    );
+  });
 
   return (
     <div>
-      <button onClick={onClick}>click</button>
-      {items.map(item => item.id)};
+      <AddItem previousItemId={null} />
+      {renderedItems}
     </div>
   )
 };
