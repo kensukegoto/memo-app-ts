@@ -1,7 +1,8 @@
 import './list-item.scss';
 import { Fragment } from 'react';
 import { useTypedSelector } from '../hooks/use-typed-selector';
-import ItemText from './item-text';
+// import ItemText from './item-text';
+import ItemTinyEditor from './item-tiny-editor';
 import AddItem from './add-item';
 
 const ListItem: React.FC = () => {
@@ -14,7 +15,10 @@ const ListItem: React.FC = () => {
   const renderedItems = items.map(item => {
     return (
       <Fragment key={item.id}>
-        <ItemText item={item} />
+        <div>
+          {item.content}
+        <ItemTinyEditor item={item} />
+        </div>
       </Fragment>
     );
   });

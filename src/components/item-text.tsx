@@ -1,5 +1,4 @@
 import './item-text.scss';
-import { useState } from "react";
 import { Item } from '../state';
 import AddItem from './add-item';
 import ActionBar from './action-bar';
