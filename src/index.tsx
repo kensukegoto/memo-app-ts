@@ -1,11 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './state';
 import reportWebVitals from './reportWebVitals';
-import ItemText from './components/item-text';
+import ListItem from './components/list-item';
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <div>
+        <ListItem />
+      </div>
+    </Provider>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <ItemText />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
